@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center buttons">
+        <button class="btn" id="scrape-recipes" title="Get new recipes">Scrape New Recipes</button>
+        <button class="btn" id="favorite-recipes" title="View your favorite recipes">Favorite Recipes</button>
+        <button class="btn" id="view-all-recipes" title="View all recipes">View All Recipes</button>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div id="recipes">
+    {{#each recipes}}
+        {{#unless favorite}}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 single-recipe-div">
+                    <div class="row">
+                        <div class="col-md-10 text-center">
+                            <a class="single-recipe-link" target=_blank href="{{this.link}}">{{this.title}}</a>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <button data-id="{{this._id}}" class="add-to-favorites btn" title="Favorites"><i class="fa fa-heart"></i></button> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img class="single-recipe-image" src="{{this.image}}">
+                        </div>
+                        <div class="col-md-8">
+                            <p>{{this.summary}}</p>
+                            <p class="single-recipe-rating text-center">Rating: {{rating}}/4</p>
+                            <p class="single-recipe-makeagain text-center">MakeAgain: {{makeagain}}%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        {{/unless}}
+        {{#if favorite}}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 single-recipe-div">
+                    <div class="row">
+                        <div class="col-md-10 text-center">
+                            <a class="single-recipe-link" target=_blank href="{{this.link}}">{{this.title}}</a>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <button data-id="{{this._id}}" class="added-to-favorites btn" title="Favorites"><i class="fa fa-heart"></i></button> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img class="single-recipe-image" src="{{this.image}}">
+                        </div>
+                        <div class="col-md-8">
+                            <p>{{this.summary}}</p>
+                            <p class="single-recipe-rating text-center">Rating: {{rating}}/4</p>
+                            <p class="single-recipe-makeagain text-center">MakeAgain: {{makeagain}}%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        {{/if}}
+    {{/each}}
+</div>
