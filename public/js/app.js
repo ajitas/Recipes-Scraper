@@ -26,7 +26,7 @@ $(document).on("click",".add-a-note", function(){
         // With that done, add the note information to the page
         .then(function(data) {
           // The title of the article
-          $("#exampleModalLongTitle").html("<h2>" + data.title + "</h2>")
+          $("#exampleModalLongTitle").html("<h4>" + data.title + "</h4>")
           $("#savenote").attr("data-id",data._id)
           // If there's a note in the article
           if (data.note) {
