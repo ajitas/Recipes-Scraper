@@ -8,7 +8,9 @@ This application scrapes www.epicurious.com for their recently added recipes. On
 [Recipe-Scraper](https://kitchen-scraper.herokuapp.com/)
 
 ## Application Preview
+### View All Recipes
 ![Recipe-Scraper-Home](public/images/view-all.png)
+### View Favorite Recipes
 ![Recipe-Scraper-Favorites](public/images/view-fav.png)
 
 ## Technologies used
