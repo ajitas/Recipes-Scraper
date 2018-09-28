@@ -10,7 +10,7 @@ var RecipeSchema = new Schema({
   title: {
     type: String,
     required: true,
-    unique:"Already present"
+    unique:true
   },
   summary: {
     type: String,
