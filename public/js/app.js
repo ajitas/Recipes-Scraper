@@ -72,8 +72,6 @@ $(document).on("click", "#savenote", function() {
       .then(function(data) {
         // Log the response
         console.log(data);
-        // Empty the notes section
-        $("#notes").empty();
       });
   
     // Also, remove the values entered in the input and textarea for note entry
